@@ -9,6 +9,10 @@ Budget Manager is a modular Android application that helps users manage their fi
 The application focuses on providing clear insights into personal spending behaviour and financial trends.
 
 ## Main Features
+
+The screenshots: 
+https://andreapassini03-ctrl.github.io/budget-manager-android/
+
 ### Expense Management
 
 * Add, edit and delete expenses
