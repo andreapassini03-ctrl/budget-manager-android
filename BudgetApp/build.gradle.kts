@@ -1,0 +1,7 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id("com.android.application") version "8.12.3" apply false // O la tua versione di Android Gradle Plugin
+    id("org.jetbrains.kotlin.android") version "2.1.0" apply false // O la tua versione di Kotlin
+    // Aggiungi il plugin Google Services qui, se non è già presente
+    id("com.google.gms.google-services") version "4.4.3" apply false // Controlla la versione più recente
+}

@@ -1,0 +1,70 @@
+# gradle/libs.versions.toml
+
+[versions]
+activityCompose = "1.10.1" # Mantieni la tua versione
+composeBom = "2025.02.00" # Use a version compatible with Kotlin 2.1.0 and compileSdk 36
+
+espressoCore = "3.6.1"
+firebaseBom = "33.16.0"
+firebaseUiAuth = "9.0.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+kotlin = "2.1.0"
+appcompat = "1.7.1"
+kotlinxCoroutinesCore = "1.10.2"
+kotlinxCoroutinesPlayServices = "1.10.2"
+lifecycleRuntimeKtx = "2.9.2"
+lifecycleViewmodelCompose = "2.9.2"
+navigationCompose = "2.9.2"
+desugarJdkLibs = "2.1.2"
+vico = "2.3.4"
+
+[libraries]
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+
+# Use only one Compose BOM
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+
+androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+androidx-junit = { module = "androidx.test.ext:junit", version.ref = "junitVersion" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+
+# Material Icons Extended and Material3 are managed by the BOM.
+# No version.ref is needed here if it's in the BOM.
+androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
+androidx-material3 = { module = "androidx.compose.material3:material3" }
+
+# Navigation Compose
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+
+# Compose UI libraries (managed by the BOM, so no version.ref here)
+androidx-ui = { module = "androidx.compose.ui:ui" }
+androidx-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
+androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+
+firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx" }
+firebase-ui-auth = { module = "com.firebaseui:firebase-ui-auth", version.ref = "firebaseUiAuth" }
+
+junit = { module = "junit:junit", version.ref = "junit" }
+
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+kotlinx-coroutines-play-services = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services", version.ref = "kotlinxCoroutinesPlayServices" }
+
+lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
+
+desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugarJdkLibs" }
+
+
+# Vico charts
+vico-compose = { module = "com.patrykandpatrick.vico:compose", version.ref = "vico" }
+vico-compose-m3 = { module = "com.patrykandpatrick.vico:compose-m3", version.ref = "vico" }
+vico-core = { module = "com.patrykandpatrick.vico:core", version.ref = "vico" }
+
+[plugins]
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
